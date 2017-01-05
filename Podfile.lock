@@ -14,13 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - JSPatch (1.1.2):
+    - JSPatch/Core (= 1.1.2)
+  - JSPatch/Core (1.1.2)
+  - JSPatchPlatform (1.6.5):
+    - JSPatchPlatform/Core (= 1.6.5)
+  - JSPatchPlatform/Core (1.6.5):
+    - JSPatch
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - JSPatchPlatform
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  JSPatch: 741205ebb2e2238c223a436e4c8cf75cf40a345f
+  JSPatchPlatform: 45e5a0b2d0a229baec33cbcf7dd3fdb0630edbe8
 
-PODFILE CHECKSUM: fe7870d68351ecd5efdb506647a9ee2f374e8def
+PODFILE CHECKSUM: cac244c33b4f99d1c8977e56b1f8566cf78164db
 
 COCOAPODS: 1.1.1

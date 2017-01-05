@@ -9,5 +9,12 @@
 #import "HWViewController.h"
 
 @implementation HWViewController
+    
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setTranslucent:NO];
+    self.navigationController.automaticallyAdjustsScrollViewInsets = NO;
+}
 
 @end

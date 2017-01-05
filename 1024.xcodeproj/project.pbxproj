@@ -19,6 +19,7 @@
 		A11CBD751E1E4D5B0090AE89 /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD741E1E4D5B0090AE89 /* HWViewController.m */; };
 		A11CBD781E1E4D800090AE89 /* HWWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD771E1E4D800090AE89 /* HWWebController.m */; };
 		A11CBD7A1E1E4F5F0090AE89 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11CBD791E1E4F5F0090AE89 /* WebKit.framework */; };
+		F94AEAEA1E1E759900C32C09 /* HWInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = F94AEAE91E1E759900C32C09 /* HWInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,9 @@
 		B842C363EBB6DC8778E40340 /* Pods-1024.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1024.release.xcconfig"; path = "Pods/Target Support Files/Pods-1024/Pods-1024.release.xcconfig"; sourceTree = "<group>"; };
 		B976587C584597EA7BE06AD4 /* Pods-1024.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1024.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1024/Pods-1024.debug.xcconfig"; sourceTree = "<group>"; };
 		BCCD5486F6E8305F9B691125 /* libPods-1024.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-1024.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F94AEAE81E1E759900C32C09 /* HWInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWInputView.h; sourceTree = "<group>"; };
+		F94AEAE91E1E759900C32C09 /* HWInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWInputView.m; sourceTree = "<group>"; };
+		F94AEAEB1E1E794500C32C09 /* HWDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +182,13 @@
 		A11CBD721E1E4D460090AE89 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F94AEAEB1E1E794500C32C09 /* HWDefines.h */,
 				A11CBD731E1E4D5B0090AE89 /* HWViewController.h */,
 				A11CBD741E1E4D5B0090AE89 /* HWViewController.m */,
 				A11CBD761E1E4D800090AE89 /* HWWebController.h */,
 				A11CBD771E1E4D800090AE89 /* HWWebController.m */,
+				F94AEAE81E1E759900C32C09 /* HWInputView.h */,
+				F94AEAE91E1E759900C32C09 /* HWInputView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -369,6 +376,7 @@
 			files = (
 				A11CBD411E1CFBCE0090AE89 /* ViewController.m in Sources */,
 				A11CBD3E1E1CFBCE0090AE89 /* AppDelegate.m in Sources */,
+				F94AEAEA1E1E759900C32C09 /* HWInputView.m in Sources */,
 				A11CBD3B1E1CFBCE0090AE89 /* main.m in Sources */,
 				A11CBD781E1E4D800090AE89 /* HWWebController.m in Sources */,
 				A11CBD751E1E4D5B0090AE89 /* HWViewController.m in Sources */,
