@@ -16,6 +16,9 @@
 		A11CBD491E1CFBCE0090AE89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11CBD471E1CFBCE0090AE89 /* LaunchScreen.storyboard */; };
 		A11CBD541E1CFBCE0090AE89 /* _024Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD531E1CFBCE0090AE89 /* _024Tests.m */; };
 		A11CBD5F1E1CFBCE0090AE89 /* _024UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD5E1E1CFBCE0090AE89 /* _024UITests.m */; };
+		A11CBD751E1E4D5B0090AE89 /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD741E1E4D5B0090AE89 /* HWViewController.m */; };
+		A11CBD781E1E4D800090AE89 /* HWWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD771E1E4D800090AE89 /* HWWebController.m */; };
+		A11CBD7A1E1E4F5F0090AE89 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11CBD791E1E4F5F0090AE89 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,11 @@
 		A11CBD5A1E1CFBCE0090AE89 /* 1024UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1024UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11CBD5E1E1CFBCE0090AE89 /* _024UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _024UITests.m; sourceTree = "<group>"; };
 		A11CBD601E1CFBCE0090AE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A11CBD731E1E4D5B0090AE89 /* HWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewController.h; sourceTree = "<group>"; };
+		A11CBD741E1E4D5B0090AE89 /* HWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWViewController.m; sourceTree = "<group>"; };
+		A11CBD761E1E4D800090AE89 /* HWWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWebController.h; sourceTree = "<group>"; };
+		A11CBD771E1E4D800090AE89 /* HWWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWebController.m; sourceTree = "<group>"; };
+		A11CBD791E1E4F5F0090AE89 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B842C363EBB6DC8778E40340 /* Pods-1024.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1024.release.xcconfig"; path = "Pods/Target Support Files/Pods-1024/Pods-1024.release.xcconfig"; sourceTree = "<group>"; };
 		B976587C584597EA7BE06AD4 /* Pods-1024.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1024.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1024/Pods-1024.debug.xcconfig"; sourceTree = "<group>"; };
 		BCCD5486F6E8305F9B691125 /* libPods-1024.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-1024.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11CBD7A1E1E4F5F0090AE89 /* WebKit.framework in Frameworks */,
 				8DAE8F4530F573CE4E1A9D80 /* libPods-1024.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +95,7 @@
 		1E1578127B37D1F292A5A078 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A11CBD791E1E4F5F0090AE89 /* WebKit.framework */,
 				BCCD5486F6E8305F9B691125 /* libPods-1024.a */,
 			);
 			name = Frameworks;
@@ -133,6 +143,7 @@
 				A11CBD451E1CFBCE0090AE89 /* Assets.xcassets */,
 				A11CBD471E1CFBCE0090AE89 /* LaunchScreen.storyboard */,
 				A11CBD4A1E1CFBCE0090AE89 /* Info.plist */,
+				A11CBD721E1E4D460090AE89 /* Classes */,
 				A11CBD391E1CFBCE0090AE89 /* Supporting Files */,
 			);
 			path = 1024;
@@ -162,6 +173,17 @@
 				A11CBD601E1CFBCE0090AE89 /* Info.plist */,
 			);
 			path = 1024UITests;
+			sourceTree = "<group>";
+		};
+		A11CBD721E1E4D460090AE89 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A11CBD731E1E4D5B0090AE89 /* HWViewController.h */,
+				A11CBD741E1E4D5B0090AE89 /* HWViewController.m */,
+				A11CBD761E1E4D800090AE89 /* HWWebController.h */,
+				A11CBD771E1E4D800090AE89 /* HWWebController.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +370,8 @@
 				A11CBD411E1CFBCE0090AE89 /* ViewController.m in Sources */,
 				A11CBD3E1E1CFBCE0090AE89 /* AppDelegate.m in Sources */,
 				A11CBD3B1E1CFBCE0090AE89 /* main.m in Sources */,
+				A11CBD781E1E4D800090AE89 /* HWWebController.m in Sources */,
+				A11CBD751E1E4D5B0090AE89 /* HWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +599,7 @@
 				A11CBD651E1CFBCE0090AE89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11CBD661E1CFBCE0090AE89 /* Build configuration list for PBXNativeTarget "1024Tests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +608,7 @@
 				A11CBD681E1CFBCE0090AE89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11CBD691E1CFBCE0090AE89 /* Build configuration list for PBXNativeTarget "1024UITests" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +617,7 @@
 				A11CBD6B1E1CFBCE0090AE89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
