@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HWWebController.h"
+#import <JSPatchPlatform/JSPatch.h>
 
 @interface AppDelegate ()
 
@@ -31,7 +32,7 @@
 // 配置第三方应用
 - (void)configThirdTools {
     
-    
+     [JSPatch startWithAppKey:@""];
 }
 
 

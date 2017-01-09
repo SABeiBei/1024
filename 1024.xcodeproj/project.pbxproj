@@ -19,6 +19,8 @@
 		A11CBD751E1E4D5B0090AE89 /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD741E1E4D5B0090AE89 /* HWViewController.m */; };
 		A11CBD781E1E4D800090AE89 /* HWWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11CBD771E1E4D800090AE89 /* HWWebController.m */; };
 		A11CBD7A1E1E4F5F0090AE89 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11CBD791E1E4F5F0090AE89 /* WebKit.framework */; };
+		A11CBD901E1F46AE0090AE89 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11CBD8F1E1F46AE0090AE89 /* JavaScriptCore.framework */; };
+		A11CBD921E1F46B40090AE89 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A11CBD911E1F46B40090AE89 /* libz.tbd */; };
 		F94AEAEA1E1E759900C32C09 /* HWInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = F94AEAE91E1E759900C32C09 /* HWInputView.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		A11CBD761E1E4D800090AE89 /* HWWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWebController.h; sourceTree = "<group>"; };
 		A11CBD771E1E4D800090AE89 /* HWWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWebController.m; sourceTree = "<group>"; };
 		A11CBD791E1E4F5F0090AE89 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A11CBD8F1E1F46AE0090AE89 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A11CBD911E1F46B40090AE89 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B842C363EBB6DC8778E40340 /* Pods-1024.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1024.release.xcconfig"; path = "Pods/Target Support Files/Pods-1024/Pods-1024.release.xcconfig"; sourceTree = "<group>"; };
 		B976587C584597EA7BE06AD4 /* Pods-1024.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1024.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1024/Pods-1024.debug.xcconfig"; sourceTree = "<group>"; };
 		BCCD5486F6E8305F9B691125 /* libPods-1024.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-1024.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11CBD921E1F46B40090AE89 /* libz.tbd in Frameworks */,
+				A11CBD901E1F46AE0090AE89 /* JavaScriptCore.framework in Frameworks */,
 				A11CBD7A1E1E4F5F0090AE89 /* WebKit.framework in Frameworks */,
 				8DAE8F4530F573CE4E1A9D80 /* libPods-1024.a in Frameworks */,
 			);
@@ -99,6 +105,8 @@
 		1E1578127B37D1F292A5A078 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A11CBD911E1F46B40090AE89 /* libz.tbd */,
+				A11CBD8F1E1F46AE0090AE89 /* JavaScriptCore.framework */,
 				A11CBD791E1E4F5F0090AE89 /* WebKit.framework */,
 				BCCD5486F6E8305F9B691125 /* libPods-1024.a */,
 			);

@@ -11,7 +11,9 @@
 
 @interface HWInputView : UIView
 
-+ (instancetype)inputViewWithConfirmBlock:(void(^)(HWInputView *inputView))confirmBlock
++ (instancetype)inputViewWithConfirmBlock:(void(^)(HWInputView *inputView,NSString *code))confirmBlock
                                closeBlock:(void(^)(HWInputView *inputView))closeBlock;
+
+- (void)valicatedSuccess:(BOOL)isSuccess;
 
 @end

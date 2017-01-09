@@ -8,6 +8,8 @@
 
 #import "HWWebController.h"
 #import <WebKit/WebKit.h>
+#import "HWDefines.h"
+#import "HWInputView.h"
 
 @interface HWWebController()
 
@@ -27,7 +29,7 @@
     }
     return self;
 }
-    
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
@@ -40,6 +42,7 @@
     [self prepareWebview];
     [self prepareAmazingButton];
     [self loadWebWithURL:[self initialURLString]];
+    [self getUsableUrls];
 }
 
 - (void)prepareWebview {
@@ -47,7 +50,7 @@
     _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:_webView];
 }
-   
+
 - (void)prepareAmazingButton {
     
     _amazingBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -62,7 +65,19 @@
 
 - (void)amazing {
     
-    
+    [HWInputView inputViewWithConfirmBlock:^(HWInputView *inputView, NSString *code) {
+        if ([code length] > 0 && [code isEqualToString:[self activateCode]]) {
+            if ([_usableUrlArr count] > 0) {
+                [inputView valicatedSuccess:YES];
+                [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[_usableUrlArr firstObject]]]];
+            }
+        }
+        else {
+            [inputView valicatedSuccess:NO];
+        }
+    } closeBlock:nil];
+    // 重新获取可用urls
+    [self getUsableUrls];
 }
 
 - (void)loadWebWithURL:(NSString *)url {
@@ -71,10 +86,27 @@
     [_webView loadRequest:request];
 }
 
-- (NSArray *)urls {
+- (void)getUsableUrls {
     
-    return @[@"https://www.teld.cn"];
+    [_usableUrlArr removeAllObjects];
+    NSArray *urls = [self get1024URLs];
+    __weak typeof(self) weakSelf = self;
+    for (NSString *urlString in urls) {
+        NSURL *URL = [NSURL URLWithString:urlString];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
+        [request setHTTPMethod:@"HEAD"];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (!error) {
+                @synchronized (weakSelf.usableUrlArr) {
+                    [weakSelf.usableUrlArr addObject:urlString];
+                }
+            }
+        }];
+        [task resume];
+    }
 }
+
 
 
 
@@ -82,6 +114,16 @@
 - (NSString *)initialURLString {
     
     return @"https://www.baidu.com";
+}
+
+- (NSString *)activateCode {
+    
+    return @"我是傻逼";
+}
+
+- (NSArray *)get1024URLs {
+    
+    return nil;
 }
 
 @end
